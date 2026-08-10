@@ -28,8 +28,7 @@ Each NAND uses two PMOS in parallel (pull-up) and two NMOS in series (pull-down)
 
 ## Files
 - `Dlatch.asc` - LTspice schematic
-- `Dlatch.plt` - plot settings
-- `images/schematic.png` - transistor-level schematic
+- `schematic.png` - transistor-level schematic
 
 ## Simulation setup
 
