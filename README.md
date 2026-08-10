@@ -4,6 +4,8 @@ Transistor-level implementation and simulation of a D latch in LTspice, built en
 
 The circuit is assembled from four 2-input CMOS NAND gates plus one inverter (18 transistors total). Two NAND gates gate the data input with the clock; the remaining two are cross-coupled to form the storage loop.
 
+![Schematic](images/schematic.png)
+
 ## Circuit
 
 | Block | Transistors | Function |
@@ -24,12 +26,16 @@ Each NAND uses two PMOS in parallel (pull-up) and two NMOS in series (pull-down)
 | 1 | 0 | 0 | Transparent - Q follows D |
 | 1 | 1 | 1 | Transparent - Q follows D |
 
+![Simulation waveform](waveform.png)
+
 The simulation confirms level-sensitive behaviour: Q tracks D continuously while CLK is high, and holds its state as soon as CLK returns low.
 
 ## Files
 
 - `Dlatch.asc` - LTspice schematic
 - `Dlatch.plt` - plot settings
+- `images/schematic.png` - transistor-level schematic
+- `images/waveform.png` - transient simulation result
 
 ## Simulation setup
 
